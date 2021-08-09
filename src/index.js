@@ -1,12 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import App from './App';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import store from './store/store';
+import { SingleBankItemPage } from './components/SingleBankItem';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  useParams,
+  useLocation
+} from "react-router-dom";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/all-banks">
+            <App/>
+          </Route>
+          <Route exact path="/bank-details/:ifsc">
+            <SingleBankItemPage/>
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

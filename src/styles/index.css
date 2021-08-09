@@ -1,0 +1,339 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+div.navbar-wrapper {
+  padding: 1em 1.5em;
+  font-size: 1.3em;
+}
+div.navbar-wrapper > div.navbar-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.8em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #f1f1f1;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-logo > svg {
+  font-size: 1.3em;
+  margin-right: 0.4em;
+  color: #1CACFE;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.3em 0.8em;
+  padding-left: 0.3em;
+  background-color: #f4f4f4;
+  border-radius: 2em;
+  width: 80%;
+  max-width: 500px;
+  height: 2.5em;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search > input {
+  background-color: transparent;
+  flex-grow: 1;
+  padding: 0.3em 0.5em;
+  font-size: 0.9em;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-in;
+  height: 100%;
+  padding: 0.3em 0.7em;
+  background-color: #595959;
+  color: white;
+  border-radius: 2em;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search > div > svg {
+  margin-right: 0.5em;
+  font-size: 0.6em;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search > div > span {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+div.navbar-wrapper > div.navbar-search-container > div.navbar-search > div > span > i {
+  font-size: 0.6em;
+  font-style: normal;
+  display: block;
+}
+div.navbar-wrapper > div.navbar-city-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 450;
+  user-select: none;
+  margin-bottom: 0.5em;
+}
+div.navbar-wrapper > div.navbar-city-dropdown-wrapper > span {
+  font-size: 0.8em;
+  margin-right: 1em;
+}
+div.navbar-wrapper > div.navbar-nav-options {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  border-radius: 2em;
+  background-color: #f4f4f4;
+  font-weight: 450;
+}
+div.navbar-wrapper > div.navbar-nav-options > a {
+  background-color: transparent;
+  border-radius: inherit;
+  padding: 0.3em 0.8em;
+  display: inline-block;
+}
+div.navbar-wrapper > div.navbar-nav-options > a[select="1"] {
+  background-color: #1CACFE;
+  color: white;
+}
+
+div.combo-box {
+  position: relative;
+  min-width: 150px;
+  font-size: 0.8em;
+}
+div.combo-box > span {
+  border-radius: 0.3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3em 0.8em;
+  background-color: #595959;
+  color: white;
+  border-radius: 2em;
+  outline: none;
+}
+div.combo-box > span > svg {
+  font-size: 0.8em;
+}
+div.combo-box > ul {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  border: 2px solid #595959;
+  padding: 0.5em;
+  padding-left: 0px;
+  list-style: none;
+  width: 100%;
+  margin: 0.5em 0px;
+  border-radius: 0.3em;
+  transition: opacity 0.3s ease-in;
+}
+div.combo-box > ul[visible="0"] {
+  opacity: 0;
+  pointer-events: none;
+}
+div.combo-box > ul > li {
+  padding: 0.2em 0.8em;
+  color: #595959;
+  cursor: pointer;
+}
+div.combo-box > ul > li:hover {
+  color: black;
+}
+
+div.special-label {
+  color: #1CACFE;
+  font-weight: 550;
+  font-size: 1.2em;
+  position: relative;
+  width: fit-content;
+}
+div.special-label > i {
+  position: absolute;
+  font-style: normal;
+  font-size: 0.7em;
+  top: 0px;
+  transform: translateY(-50%);
+  padding: 0px 0.5em;
+  left: 1em;
+  background-color: white;
+}
+div.special-label > span {
+  padding: 0.3em 1em;
+  display: block;
+  font-size: 1.1em;
+  border: 2px solid currentColor;
+  border-radius: 2em;
+}
+
+div.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+div.pagination-wrapper > div.page-limit-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+div.pagination-wrapper > div.page-limit-input > span {
+  margin-right: 0.5em;
+}
+div.pagination-wrapper > div.page-limit-input > span:last-child {
+  border: 2px solid black;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  padding: 0.3em;
+  cursor: pointer;
+}
+div.pagination-wrapper > div.page-limit-input > input[type=number] {
+  font-size: 1em;
+  border: 2px solid black;
+  padding: 0.3em;
+  width: 3em;
+}
+div.pagination-wrapper > div.page-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.pagination-wrapper > div.page-selector > span {
+  margin: 0px 1em !important;
+}
+div.pagination-wrapper > div.page-selector > span:first-child {
+  margin-left: 0px !important;
+}
+div.pagination-wrapper > div.page-selector > span:last-child {
+  margin-right: 0px !important;
+}
+div.pagination-wrapper > div.page-selector span {
+  padding: 0.2em 0.5em;
+  border: 2px solid black;
+  margin: 0px 0.2em;
+  cursor: pointer;
+}
+div.pagination-wrapper > div.page-selector span.currentPage {
+  background-color: black;
+  color: white;
+}
+
+div.styled-anchor-container {
+  display: flex;
+}
+div.styled-anchor-container > a {
+  margin: 0px 0.5em;
+  padding: 0.5em;
+  border: 2px solid black;
+}
+
+div.bank-item-list {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 90%;
+  max-width: 700px;
+}
+
+div.bank-item {
+  margin-bottom: 2em;
+  border: 2px solid black;
+  border-radius: 0.3em;
+  padding: 1em;
+  width: 100%;
+  text-transform: uppercase;
+}
+div.bank-item > i {
+  font-style: normal;
+  color: #C6C6C6;
+  font-weight: 550;
+}
+div.bank-item > div.bottom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.bank-item > div.bottom-wrapper > div.address-with-label {
+  width: 70%;
+}
+div.bank-item > div.bottom-wrapper > div.address-with-label > span {
+  background-color: black;
+  color: white;
+  padding: 0.3em;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 0.3em;
+}
+div.bank-item > div.bottom-wrapper > div.address-with-label > p {
+  margin: 0.8em 0px;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+}
+div.bank-item > div.bottom-wrapper > button {
+  font-weight: 500;
+  font-size: 0.95em;
+  color: gray;
+  border: 2px solid currentColor;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+div.bank-item > div.bottom-wrapper > button:hover {
+  color: black;
+}
+div.bank-item > div.bottom-wrapper > button[favourite="1"] {
+  color: #1CACFE;
+  background-color: #DEF3FF;
+}
+div.bank-item > div.bank-name-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.bank-item > div.bank-name-info-wrapper > div.bank-name-info {
+  font-size: 1.1em;
+  width: 60%;
+}
+div.bank-item > div.bank-name-info-wrapper > div.bank-name-info > h2 {
+  margin: 0.3em 0px;
+  margin-top: 0.5em;
+  font-weight: 550;
+}
+div.bank-item > div.bank-name-info-wrapper > div.bank-name-info > h4 {
+  font-weight: 550;
+  margin: 0.3em 0px;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  color: #595959;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+button, a, input {
+  border: 0px solid black;
+  background-color: white;
+  border-radius: 0px;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+/*# sourceMappingURL=index.css.map */
